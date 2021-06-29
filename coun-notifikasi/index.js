@@ -1,14 +1,20 @@
 
-const notification=["New friend request!","your order has been placed for $5.000"]
+const notifications=["New friend request!","your order has been placed for $5.000"];
+showNotificationCount(notifications.length)
+
+setTimeout(function(){
+    addNotification("Ada yang Srebed");
+},5000)
+
 function addNotification(notification)
 {
-    notification.push(notification);
-    showNotificationCount(notification.length);
+    notifications.push(notification);
+    showNotificationCount(notifications.length);
 }
 function removeNotification(notification)
 {
-    notification.sift(notification);
-    showNotificationCount(notification.length);
+    notifications.shift();
+    showNotificationCount(notifications.length);
 }
 
 
